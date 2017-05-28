@@ -93,7 +93,7 @@ P(Y = 1|X) = log(P(x0|Y = 1)) + log(P(x1|Y = 1)) + ...+ log(P(x_n|Y = 1))
 $$
 Since $exp$ is a constant, it is not necessary that we add it to our computation of $P(Y = 1|X)$. Because the log of a small number is a larger number, this solves our underflow issue.We tuned the parameters m and k by trial and error. We found that the value of m and k that were the best for us were m = 1.1 and k = 0.1. 
 
-\section{Part 3}
+### Part 3
 \textbf{10 words that most strongly predict that the review is positive: } \\ 
 ['silverado', 'wilma', 'constraints', 'unequivocal', 'clueless', 'evens', 'efficiency', 'helmet', 'mayo', 'laundry'], 
 \\
@@ -104,7 +104,7 @@ Since $exp$ is a constant, it is not necessary that we add it to our computation
 \textbf{To obtain our predictors: }
 \\ To obtain the best predictors, we chose the top 10 highest conditional probabilities from our negative set of words and the top ten conditional probabilities from the positive class of words. 
 
-\section{Part 4}
+###Part 4
 Train a Logistic Regression model on the same dataset. For a single movie review, For a single review r the input to the Logistic Regression model will be a k -dimensional vector v , where v[k]=1 if the k -th keyword appears in the review r
 \\
 The way the input features are constructed are as the following: For a single review r, the input features is a vector v, [1xk] where k is the number of unique words in the training set. That is, all words that appear in positive and negative training class. If the i-th word appear in the review r, then v[k] = 1 and otherwise v[k] = 0. For m reviews in our training set, we have our input features with a dimension of [mxk]. To apply logistic regression, we initialize our weights, $\theta$, as [2xm] where 2 refers the polarity of the review, i.e. positive or negative review. 
@@ -121,7 +121,7 @@ Our learning curve is show below. It plots error rate for every 100 iterations.
 \includegraphics[width=8cm]{figure_1}
 
 
-\section{Part 5}
+### Part 5
 The formulation of both Logistic Regression and Naive Bayes can generalized to what is shown below:
 \[\sum_{i=0}^{k} \theta_i I_i(x) = \theta_0 + \theta_1 I_1 + \theta_2 I_2 +...+ \theta_k I_k > 0.5 \]
 The interpretation of the parameters in the formula is justified in the table below. Note k here refers to the number of all words that appear in both positive and negative training class. i means the i-th word in the training class.  \\
@@ -141,7 +141,7 @@ The interpretation of the parameters in the formula is justified in the table be
 \\
 $I_i$ here is a binary variable for each positive review $r_i$, which represents the status whether the i-th word in the review $r_i$. For further details, please see in discussion in part 4. 
 
-\section{Part 6}
+### Part 6
 The top 100 θ s that you obtained using Logistic Regression: \\
 For positive reviews: 'impacted', 'frenzy', 'eruption', 'cellist', 'vow', 'geologic', 'zdenek', 'kathryn', 'leeper', 'characterizations', 'jan', 'allen', 'burst', "dante's", "afi's", 'atheist', 'paramount', 'rigors', 'stallone', 'snoozing', 'geologist', 'tropical', 'dragons', 'yells', 'dumping', 'railway', 'volcanos', 'chums', 'heat', 'bigelow', 'considered', 'multiplex', 'procedure', 'downer', "ricci's", 'understood', 'slice', 'twister', 'volcano', 'theorists', 'enrages', 'gallons', "town's", 'visceral', 'kolya', 'straps', 'bachelor', 'sesame', 'brill', 'hoped', 'debating', 'abode', 'ingred', 'connections', 'partaking', 'lori', 'unborn', 'abruptly', 'reporter', 'bundle', 'darryl', 'ghreat', 'someday', 'volcanic', 'proposed', 'collapses', 'jobs', 'digitally', 'emo', 'busey', 'phones', 'humphry', 'hampered', 'napkin', 'mace', 'beth', 'confession', 'mst', 'pets', 'daring', 'solaris', 'animus', 'richest', "'volcano'", 'jay', 'quake', 'defensive', 'kkk', 'tenants', 'business', 'labute', 'kenny', "'cheezy'", 'secret', 'table', 'okay', "'twister'", 'quandary', 'expecting', 'replacement'.\\
 \\
@@ -154,7 +154,7 @@ The top 100 θ s that you obtained using Naive Bayes: \\
 ['abortive', 'prototype', 'trump', "sorvino's", 'rehashing', 'innocently', 'dunces', 'pun', 'tattooed', 'leering', 'void', 'stomped', 'passport', 'stud', 'transparently', 'op', 'studying', 'customer', 'scarborough', 'ugliness', 'richness', 'films', 'jax', 'selena', 'title', 'aging', 'talkies', 'sublimated', 'mosaic', 'bluntly', 'impersonation', 'discovers', 'frenchman', 'laborious', 'oblivion', 'dont', 'bowl', 'parachute', 'leader', 'outta', 'reccemond', 'ray', 'cannon', 'shirts', 'bothersome', 'floor', 'attar', 'prevents', 'ponder', 'puns', 'smitten', 'throwback', 'tossed', 'lead', 'pacify', 'alyson', 'differnt', 'got', 'adolf', 'basketball', 'care', 'yo', 'nikita', 'creep', "arthur's", 'phil', 'blooded', 'trucking', 'salt', 'tickets', 'energetic', 'occur', 'overthrow', 'grace', 'exploding', 'hardworking', 'disaster', 'carries', 'appear', 'lingerie', 'money', 'growing', 'modern', "nun's", 'papers', 'passionately', 'reporter', 'friendship', 'nest', 'killings', 'acts', 'graft', 'thirty', 'scully', 'prinze', 'cast', 'conti', 'dorn', 'proudly', 'touts']
 
 
-\section{Part 7}
+### Part 7
 The performance of our logistic regression is shown below:\\
 \\
 \textbf{Training Set: } 0.667022 \\
@@ -176,16 +176,14 @@ In order to accomplish this, we generate features are as follows: \\
   In order to train our classifier, we decided to use batches. When we weren't using batches, we found that we had a much lower accuracy and additionally it took us much longer to converge. Since different batches had somewhat different composition of tuples, using batches enabled us to cycle through our training data more quickly and also allowed us to prevent overfitting. It also allowed us to cycle through more data in general which helped improve our accuracy .Through trial and error we found that the best learning rate for us was 0.00005. Additionally, the regularization penalty, through trial and error, did not do much to help us obtain a better performance. This is likely because regularization helps ensure that some features do not overpower other in their importance and this is not very applicable to this scenario. Using smaller batches (about 100) resulted in having a larger variance in the range of values that we would obtain for our performance. For example, with training size of about 100, we got results between 0.65 - 0.75. Using larger batches resulted in more stable range of values for performance, however, were much slower to converge and, as such, at the time of termination were lower than what we obtained from smaller batches. 
 
 
-\section{Part 8}
+### Part 8
 To finding words that are the most similar to target words, we choose to check for cosine similarity. The final result there are "the most similar words to story are how, film, mon, magma, rightly, ingenious, bane, walsh, manipulative, inclusion" and "the most similar words to good are could, hes, whether, awash, understand, think, meanings, fascinated, hirschfeld, delpy". The two interesting examples that demonstrates that word2vec works are as followed.\\
 \\
 word2vec(gloriously) = word2vec(joy) + word2vec(happy)\\
 word2vec(great) = word2vec(better) + word2vec(good)\\
 \\
 To do this, we first compute the sum of the embeddings of these two words. We treat the sum as our new target word to feed into our similar words finder function, which is part8(), and what we get are the word that has the most cosine similarity with the sum embeddings. The word we find for 'joy' and 'happy' is 'gloriously'; for 'better' and 'good' is 'great', which makes sense.\\
-\\
-\section{Part 9}
+
+### Part 9
 To generate the dataset on which Logistic Regression works a significantly better than Naive Bayes, we want to increase the randomness of our dataset. Similar idea of what we did in Part 5 in Project 2, logstic regression generally is expected to have a better performance than naive bayes when given fairly noisy input. Thus, we swapped the first 20\% of training set for pos and neg. The results shows us that logistic regression perform steadily than naive bayes. \\
 The code snipped is as followed: 
-
-\end{document}
