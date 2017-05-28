@@ -1,6 +1,5 @@
 
 # Deep Neural Networks for Handwritten Digit and Face Recognition
-March 201
 
 ### Part1
 Data set include training data(train number) and testing data(test number) from digit 0 to digit 9.  
