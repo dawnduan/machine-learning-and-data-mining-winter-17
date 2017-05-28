@@ -1,10 +1,10 @@
 
 
-\section{Part 1}
-The pseudocode on p. 271 of Sutton & Barto is as follows: \\
+Part 1
+The pseudocode on p. 271 of Sutton & Barto is as follows: 
 \includegraphics[scale=0.75]{p1_pesudo.png}\\
-\\
-The precise explanation of why the code corresponds to the pseudocode is as follows.\\
+
+The precise explanation of why the code corresponds to the pseudocode is as follows.
 \begin{enumerate}
     \item \textbf{Declare all the input variables, i.e. the policy variable $\pi$, action variable $a$, state variable $s$.}
     \\
