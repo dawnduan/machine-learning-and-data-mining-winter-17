@@ -91,7 +91,7 @@ P(Y = 1|X) = log(P(x0|Y = 1)) + log(P(x1|Y = 1)) + ...+ log(P(x_n|Y = 1))
 
 \end{equation}
 $$
-Since $exp$ is a constant, it is not necessary that we add it to our computation of $P(Y = 1|X)$. Because the log of a small number is a larger number, this solves our underflow issue.We tuned the parameters m and k by trial and error. We found that the value of m and k that were the best for us were m = 1.1 and k = 0.1. 
+Since $exp$ is a constant, it is not necessary that we add it to our computation of $P(Y = 1|X)​$. Because the log of a small number is a larger number, this solves our underflow issue.We tuned the parameters m and k by trial and error. We found that the value of m and k that were the best for us were m = 1.1 and k = 0.1. 
 
 \section{Part 3}
 \textbf{10 words that most strongly predict that the review is positive: } \\ 
